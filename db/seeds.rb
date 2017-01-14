@@ -7,7 +7,8 @@ emotions = %w[joy sorrow anger surprise]
 		email: Faker::Internet.email,
 		phone: Faker::PhoneNumber.phone_number,
 		push?: true,
-		text?: true
+		text?: true,
+		password: "password"
 		})
 	user.days.create({
 		emotion: emotions.sample
