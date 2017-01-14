@@ -1,5 +1,7 @@
 require 'faker'
 
+emotions = %w[joy sorrow anger surprise]
+
 20.times do 
 	user = User.create({
 		email: Faker::Internet.email,
@@ -8,7 +10,7 @@ require 'faker'
 		text?: true
 		})
 	user.days.create({
-		emotion: "joy"
+		emotion: emotions.sample
 		})
 	user.favorites.create({
 		interests: Faker::Beer.name
