@@ -7,10 +7,5 @@
 
 	"scripts": {
 		"postinstall": "bower cache clean && bower install"
-	},
-
-  "engine": {
-    "node": "6.2.1",
-    "npm": "3.9.3"
-  }
+	}
 }
