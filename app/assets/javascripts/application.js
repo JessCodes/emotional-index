@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require materialize
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require materialize
 //
 // Bower packages
 //= require highcharts
