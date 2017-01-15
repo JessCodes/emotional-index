@@ -21,6 +21,7 @@ gem 'twilio-ruby'
 gem 'giphy'
 gem 'bower-rails', '~> 0.11.0'
 gem 'httparty'
+gem 'hirb'
 
 group :development, :test do
   gem 'byebug', platform: :mri
