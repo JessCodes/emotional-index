@@ -1,1 +1,1 @@
-web: npm bower install
+web: node index.js
