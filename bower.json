@@ -1,0 +1,9 @@
+{
+  "name": "emoteme",
+  "dependencies": {
+    "jquery": "latest",
+    "materialize": "latest",
+    "highcharts": "latest",
+    "underscore": "latest"
+  }
+}
