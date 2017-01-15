@@ -1,11 +1,13 @@
 {
-	"name": "emoteme",
-	"version": "1.0.0",
-	"devDependencies": {
-		"bower": "~1.2"
-	},
-
-	"scripts": {
-		"postinstall": "bower cache clean && bower install"
-	}
+  "name": "emoteme",
+  "version": "1.0.0",
+  "devDependencies": {
+    "bower": "~1.2"
+  },
+  "scripts": {
+    "postinstall": "bower cache clean && bower install"
+  },
+  "dependencies": {
+    "bower": "^1.2.8"
+  }
 }
