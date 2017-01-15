@@ -22,3 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Tech Stack Used
+- Swift
+    + Cocopods
+    + Alamofire
+- Ruby/Ruby on Rails
+    + Bower
+    + JS
+    + Materialize/CSS
+    + HTML5
+    + Highcharts
+    + Travis/Circle CI
+- Heroku
