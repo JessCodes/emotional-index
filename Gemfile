@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'faker'
 gem 'twilio-ruby'
+gem 'giphy'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -9,12 +9,24 @@ class ApiController < ApplicationController
   end
 
   def twilio
-    ENV['TWILIO_SID_KEY']
-    ENV['TWILIO_AUTH_KEY']
+    @client = Twilio::REST::Client.new ENV['TWILIO_SID_KEY'], ENV['TWILIO_AUTH_KEY']
+    begin
+      @client.messages.create(
+        body: "hello",
+        to: "+19499230368",
+        from: "+19493572945"
+      )
+    rescue Twilio::REST::RequestError => error
+      puts error.message
+      flash[:notice] = "Something went wrong!"
+    end
   end
 
   def giphy
-    ENV['GIPHY_KEY']
+    Giphy::Configuration.configure do |config|
+      config.api_key = ENV['GIPHY_KEY']
+    end
+    @image=Giphy.random("puppies")
   end
 
   def gmaps
