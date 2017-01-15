@@ -4,7 +4,13 @@
 	"devDependencies": {
 		"bower": "~1.2"
 	},
+
 	"scripts": {
 		"postinstall": "bower cache clean && bower install"
-	}
+	},
+
+  "engine": {
+    "node": "6.2.x",
+    "npm": "3.9.3"
+  }
 }
