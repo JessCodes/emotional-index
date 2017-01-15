@@ -1,13 +1,27 @@
 {
-  "name": "emoteme",
+  "name": "emotional-index",
   "version": "1.0.0",
-  "devDependencies": {
-    "bower": "~1.2"
-  },
-  "scripts": {
-    "postinstall": "bower cache clean && bower install"
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
   },
   "dependencies": {
     "bower": "^1.2.8"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessCodes/emotional-index.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessCodes/emotional-index/issues"
+  },
+  "homepage": "https://github.com/JessCodes/emotional-index#readme"
 }
