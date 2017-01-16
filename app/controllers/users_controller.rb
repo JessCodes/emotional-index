@@ -26,7 +26,7 @@ class UsersController < ApplicationController
       f.title({:text=>"yo feelings"})
       f.series(:type=> 'pie',:name=> 'Total consumption',
         :data=> [
-          {:name=> 'Sorrow', :y=> sorrow, :color=> 'blue'},
+          {:name=> 'Sorrow', :y=> sorrow, :color=> '#547980'},
           {:name=> 'Joy', :y=> joy,:color=> 'green'},
           {:name=> 'Surprise', :y=> surprise,:color=> 'purple'},
           {:name=> 'Anger', :y=> anger,:color=> 'red'}

@@ -1,6 +1,18 @@
-<h1>Welcome to your homepage <%= @user.email %>!!!!!!!!!!!</h1>
+<% if @user == current_user %>
+  <h3 class="center">Welcome back, <%= @user.email %>!</h3>
+<% else %>
+  <h3 class="center"><%= @user.email %></h3>
+<% end %>
+<div class="divider"></div>
 
-
-  <div id="chart">
+<div id="chart">
+  <% if logged_in? && !@user.days.empty? && @user == current_user %>
     <%= high_chart("chart", @chart) %>
-  </div>
+  <% elsif !logged_in? %>
+    You need to be <%= link_to 'logged in', login_path %>!
+  <% elsif @user != current_user %>
+    You can't see other people's feelings!
+  <% else %>
+    You don't have feelings!
+  <% end %>
+</div>
