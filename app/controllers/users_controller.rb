@@ -17,22 +17,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
 
-    sorrow = @user.days.where(emotion: 'sorrow').count
-    joy = @user.days.where(emotion: 'joy').count
-    surprise = @user.days.where(emotion: 'surprise').count
-    anger = @user.days.where(emotion: 'anger').count
-
-    @chart = LazyHighCharts::HighChart.new('graph') do |f|
-      f.title({:text=>"yo feelings"})
-      f.series(:type=> 'pie',:name=> 'Total days',
-        :data=> [
-          {:name=> 'Sorrow', :y=> sorrow, :color=> '#547980'},
-          {:name=> 'Joy', :y=> joy,:color=> 'green'},
-          {:name=> 'Surprise', :y=> surprise,:color=> 'purple'},
-          {:name=> 'Anger', :y=> anger,:color=> 'red'}
-        ],
-        :center=> [550, 150], :size=> 300, :showInLegend=> false)
-    end
+    @chart = User.chart(@user)
   end
 
   def edit

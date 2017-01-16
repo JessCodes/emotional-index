@@ -14,3 +14,11 @@ a {
 a:hover {
   color: #9DE0AD
 }
+
+nav {
+  background-color: #547980;
+}
+
+.brand-logo {
+  margin-left: 15px;
+}

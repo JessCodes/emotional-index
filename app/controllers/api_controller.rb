@@ -32,7 +32,7 @@ require 'httparty'
     Giphy::Configuration.configure do |config|
       config.api_key = ENV['GIPHY_KEY']
     end
-    p @image=Giphy.random("puppies").image_original_url
+    @image=Giphy.random("puppies").image_original_url
   end
 
   def gmaps
