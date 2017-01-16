@@ -10,10 +10,11 @@
 
   <body>
     <% if logged_in? %>
-    <%= "Logged in as #{current_user.email}"%>
-    <%= link_to "logout", logout_path %>
+    <%= "Logged in as #{current_user.email}"%><br />
+    <%= link_to "Edit Settings", edit_user_path(current_user)%> |
+    <%= link_to "Logout", logout_path %>
   <% else %>
-    <%= link_to "Log in", login_path %>
+    <%= link_to "Login", login_path %>
     <%= link_to "Sign Up", new_user_path %>
   <% end %>
     <%= yield %>

@@ -1,11 +1,1 @@
-<%= form_for @user do |f| %>
-  Email: <%= f.email_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  Phone Number: <%= f.text_field :phone %>
-  <%= f.check_box :push?%>
-  <%= f.label 'Accept Push Notifications', id:'push' %><br />
-  <%= f.check_box :text?%>
-  <%= f.label 'Accept Text Messages', id:'text' %><br />
-  <%= f.submit "Submit" %>
-<% end %>
+<%= render partial: "form" %>
