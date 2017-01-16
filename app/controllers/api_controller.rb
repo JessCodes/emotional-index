@@ -7,7 +7,7 @@ require 'httparty'
     # Full json response
     p response.parsed_response
     # videoId from YouTube API
-    p response.parsed_response["items"][0]["id"]["videoId"]
+    render json: response.parsed_response["items"][0]["id"]["videoId"]
   end
 
   def gemo
