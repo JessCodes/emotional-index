@@ -3,9 +3,9 @@
   Password: <%= f.password_field :password %>
   Password Confirmation: <%= f.password_field :password_confirmation %>
   Phone Number: <%= f.text_field :phone %>
-  <%= f.check_box :push?%>
-  <%= f.label 'Accept Push Notifications', id:'push' %><br />
-  <%= f.check_box :text?%>
-  <%= f.label 'Accept Text Messages', id:'text' %><br />
-  <%= f.submit "Submit" %>
+  <%= f.check_box(:push?) %>
+  <%= f.label(:push?, 'Accept Push Notifications') %><br />
+  <%= f.check_box(:text?) %>
+  <%= f.label(:text?, 'Accept Text Messages') %><br />
+  <%= f.submit %>
 <% end %>
