@@ -85,10 +85,7 @@ GEM
       launchy (~> 2.4)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-<<<<<<< HEAD
-=======
     hash-deep-merge (0.1.1)
->>>>>>> c0232899bc1b27a9860a294c7b6907eb1c9f29a7
     hirb (0.7.3)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
