@@ -23,6 +23,8 @@ gem 'materialize-sass'
 gem 'bower-rails', '~> 0.11.0'
 gem 'httparty'
 gem 'hirb'
+gem 'lazy_high_charts'
+gem 'timecop'
 
 group :development, :test do
   gem 'byebug', platform: :mri
