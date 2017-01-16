@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  
-  devise_for :users
-
-  resources :users, only: [:show, :create, :destroy]
 
   get '/youtube' => 'api#youtube'
   get '/gemo' => 'api#gemo'
