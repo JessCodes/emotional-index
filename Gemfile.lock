@@ -85,6 +85,7 @@ GEM
       launchy (~> 2.4)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    hash-deep-merge (0.1.1)
     hirb (0.7.3)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
@@ -99,6 +100,8 @@ GEM
     jwt (1.5.6)
     launchy (2.4.3)
       addressable (~> 2.3)
+    lazy_high_charts (1.5.6)
+      hash-deep-merge
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -187,6 +190,7 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    timecop (0.8.1)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
@@ -223,6 +227,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.5)
   jquery-rails
+  lazy_high_charts
   listen (~> 3.0.5)
   materialize-sass
   pg (~> 0.18)
@@ -232,6 +237,7 @@ DEPENDENCIES
   sorcery
   spring
   spring-watcher-listen (~> 2.0.0)
+  timecop
   turbolinks (~> 5)
   twilio-ruby
   tzinfo-data
