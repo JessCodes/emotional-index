@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
     @chart = LazyHighCharts::HighChart.new('graph') do |f|
       f.title({:text=>"yo feelings"})
-      f.series(:type=> 'pie',:name=> 'Total consumption',
+      f.series(:type=> 'pie',:name=> 'Total days',
         :data=> [
           {:name=> 'Sorrow', :y=> sorrow, :color=> '#547980'},
           {:name=> 'Joy', :y=> joy,:color=> 'green'},
