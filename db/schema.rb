@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20170116013110) do
   create_table "users", force: :cascade do |t|
     t.string   "email",            null: false
     t.string   "phone"
-    t.boolean  "push?"
-    t.boolean  "text?"
+    t.boolean  "push"
+    t.boolean  "text"
     t.string   "crypted_password"
     t.string   "salt"
     t.datetime "created_at"

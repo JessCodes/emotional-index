@@ -1,9 +1,1 @@
-<%= form_for @user do |f| %>
-  Email: <%= f.email_field :email %>
-  Phone Number: <%= f.text_field :phone %>
-  <%= f.check_box(:push?) %>
-  <%= f.label(:push?, 'Accept Push Notifications') %><br />
-  <%= f.check_box(:text?) %>
-  <%= f.label(:text?, 'Accept Text Messages') %><br />
-  <%= f.submit %>
-<% end %>
+<%= render partial: "form" %>

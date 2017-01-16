@@ -6,8 +6,8 @@ emotions = %w[joy sorrow anger surprise]
 	user = User.create({
 		email: Faker::Internet.email,
 		phone: Faker::PhoneNumber.phone_number,
-		push?: true,
-		text?: true,
+		push: true,
+		text: true,
 		password: "password"
 		})
 
