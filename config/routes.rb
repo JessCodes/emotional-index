@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  
-  devise_for :users
+  root to: 'sessions#new'
 
-  resources :users, only: [:show, :create, :destroy]
-
+  resources :users
+  get '/login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   get '/youtube' => 'api#youtube'
   get '/gemo' => 'api#gemo'
   get '/twilio' => 'api#twilio'
