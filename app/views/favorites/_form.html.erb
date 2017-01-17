@@ -1,5 +1,5 @@
-<div  class='submit_favorite'>
-  <%= form_for [@user, favorite] do |f| %>
+<div class='submit_favorite'>
+  <%= form_for [@user, favorite], remote: true do |f| %>
     Favorite: <%= f.text_field :interests %>
     <%= f.submit%>
   <% end %>

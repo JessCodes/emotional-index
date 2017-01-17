@@ -8,11 +8,7 @@ class FavoritesController < ApplicationController
 
   def create
     @favorite = Favorite.create(fav_params.merge(user_id: @user.id))
-    respond_to do |format|
-      format.html {edit_user_path(@user)}
-      format.js {}
-    end
-
+    redirect_to edit_user_path(@user)
   end
 
   def destroy
