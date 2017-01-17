@@ -9,9 +9,9 @@
   <% elsif !logged_in? %>
     You need to be <%= link_to 'logged in', login_path %>!
   <% elsif @user != current_user %>
-    <h4>You can't see other people's feelings!</h4>
+    <h5>You can't see other people's feelings!</h5>
   <% else %>
-    <h4>You don't have feelings!</h4>
+    <h5>You don't have feelings :(</h5>
   <% end %>
 </div>
 
