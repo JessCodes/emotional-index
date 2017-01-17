@@ -1,0 +1,5 @@
+<% favorites.each do |favorite| %>
+    <li id="<%=favorite.id%>"><%= favorite.interests %>
+      <small><em><%= link_to "Delete",  user_favorite_path(favorite.user_id, favorite.id), :method => 'delete', remote: true %></small></em>
+    </li>
+  <% end %>

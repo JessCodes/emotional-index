@@ -22,6 +22,8 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find_by(id:params[:id])
+    @favorites = @user.favorites
+    @favorite = Favorite.new(:user_id => @user.id)
   end
 
   def update
@@ -33,7 +35,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find_by(id:params[:id])
-    @user.destroy
+    @user.destroys
 
     redirect_to root_path
   end

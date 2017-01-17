@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  resources :users
+  resources :users do
+    resources :favorites, only: [:new, :create, :destroy]
+  end
+
   get '/login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
