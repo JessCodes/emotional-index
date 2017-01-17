@@ -1,1 +1,7 @@
 <%= render partial: "form" %>
+<%= link_to "Add a Favorite", new_user_favorite_path(@user), { :class=>"new-favorite-link" } %>
+
+<div class="new-favorite-form">
+    <h1 class="panel-heading">Add a Favorite</h1>
+      <%= render partial: "/favorites/form", locals: { user_id: @user.id, favorite: @favorite} %>
+</div>
