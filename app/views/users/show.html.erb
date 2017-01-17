@@ -16,3 +16,8 @@
     You don't have feelings!
   <% end %>
 </div>
+
+<div class="user-options">
+  <%= link_to "Edit Settings", edit_user_path(current_user), class: 'waves-effect waves-light'%> <br />
+  <%= link_to 'Delete Account', user_path(@user), method: :delete, data: {confirm: "Really delete your account?"}, class: 'waves-effect waves-light' %>
+</div>
