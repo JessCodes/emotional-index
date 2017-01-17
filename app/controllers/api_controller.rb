@@ -33,6 +33,10 @@ require 'httparty'
       config.api_key = ENV['GIPHY_KEY']
     end
     @image=Giphy.random("puppies")
+    # @giphy = @image.image_url.to_s
+    @giphy = @image.id.to_s
+    render json: @giphy
+
   end
 
   def gmaps
