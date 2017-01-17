@@ -1,6 +1,23 @@
-<h1>Welcome to your homepage <%= @user.email %>!!!!!!!!!!!</h1>
-
-
-  <div id="chart">
+<% if @user == current_user %>
+  <h3 class="center">Welcome back!</h3>
+<% else %>
+  <h3 class="center"><%= @user.email %></h3>
+<% end %>
+<div id="chart" class="center">
+  <% if logged_in? && !@user.days.empty? && @user == current_user %>
     <%= high_chart("chart", @chart) %>
+  <% elsif !logged_in? %>
+    You need to be <%= link_to 'logged in', login_path %>!
+  <% elsif @user != current_user %>
+    <h5>You can't see other people's feelings!</h5>
+  <% else %>
+    <h5>You don't have feelings :(</h5>
+  <% end %>
+</div>
+
+<% if @user == current_user %>
+  <div class="user-options">
+    <%= link_to "Edit Settings", edit_user_path(current_user), class: 'waves-effect waves-light'%> <br />
+    <%= link_to 'Delete Account', user_path(@user), method: :delete, data: {confirm: "Really delete your account?"}, class: 'waves-effect waves-light' %>
   </div>
+<% end %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EmotionalIndex</title>
+    <title>Emote Me</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,14 +9,21 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-    <%= "Logged in as #{current_user.email}"%><br />
-    <%= link_to "Edit Settings", edit_user_path(current_user)%> |
-    <%= link_to "Logout", logout_path %>
-  <% else %>
-    <%= link_to "Login", login_path %>
-    <%= link_to "Sign Up", new_user_path %>
-  <% end %>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Emote Me</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if logged_in? %>
+            <li><%= link_to current_user.email, user_path(current_user), class: 'waves-effect waves-light' %></li>
+            <li><%= link_to "Logout", logout_path, class: 'waves-effect waves-light' %></li>
+          <% else %>
+            <li><%= link_to "Login", login_path, class: 'waves-effect waves-light' %></li>
+            <li><%= link_to "Sign Up", new_user_path, class: 'waves-effect waves-light' %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <br />
     <%= yield %>
   </body>
 </html>
