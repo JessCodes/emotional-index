@@ -15,4 +15,14 @@ class SessionsController < ApplicationController
     logout
     redirect_to(root_path, notice: 'Logged out!')
   end
+
+  def login_swift
+    @email = params[:email]
+    @password = params[:password]
+    if login(@email,@password)
+      render json: session[:user_id]
+    else
+      render json: {errors: "not duck daddy"} 
+    end
+  end
 end
