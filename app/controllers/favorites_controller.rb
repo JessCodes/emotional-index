@@ -1,8 +1,18 @@
 class FavoritesController < ApplicationController
   before_action :find_user
+  #
+  # def new
+  #   @user = User.find_by(id:params[:id])
+  #   @favorite = Favorite.new
+  # end
 
   def create
     @favorite = Favorite.create(fav_params.merge(user_id: @user.id))
+    respond_to do |format|
+      format.html {edit_user_path(@user)}
+      format.js {}
+    end
+
   end
 
   def destroy

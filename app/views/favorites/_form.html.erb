@@ -1,4 +1,6 @@
-<%= form_for [@user, favorite] do |f| %>
-  Favorite: <%= f.text_field :interests %>
-  <%= f.submit %>
-<% end %>
+<div  class='submit_favorite'>
+  <%= form_for [@user, favorite] do |f| %>
+    Favorite: <%= f.text_field :interests %>
+    <%= f.submit%>
+  <% end %>
+</div>

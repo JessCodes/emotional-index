@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :favorites, only: [:new, :create, :destroy]
   end
-  
+
   get '/login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
