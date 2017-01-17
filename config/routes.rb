@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get '/gemo' => 'api#gemo'
   get '/twilio' => 'api#twilio'
   get '/giphy' => 'api#giphy'
+  get '/login_swift' => 'sessions#login_swift'
 
 end
