@@ -2,7 +2,7 @@ class ApiController < ApplicationController
 require 'httparty'
   def youtube
     ENV['YT_KEY']
-    url = URI("https://www.googleapis.com/youtube/v3/search?part=snippet&q='puppies'&maxResults=1&order=viewCount&alt=json&key="+ENV['YT_KEY'])
+    url = URI("https://www.googleapis.com/youtube/v3/search?part=snippet&q='dogs'&maxResults=1&order=viewCount&alt=json&key="+ENV['YT_KEY'])
     response = HTTParty.get(url)
     # Full json response
     p response.parsed_response
@@ -34,7 +34,6 @@ require 'httparty'
     end
 
     @image=Giphy.random("puppies")
-    p @image
     @giphy = @image.id.to_s
     render json: @giphy
   end
