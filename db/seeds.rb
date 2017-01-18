@@ -63,3 +63,63 @@ emotions = %w[joy sorrow anger surprise]
 				})
 		end
 end
+
+jen = User.create(email:"jen@jen.com",
+phone: "+19499230368",
+push: true,
+text: true,
+password: "penis")
+
+jen.favorites.create(interests:"Dogs")
+jen.favorites.create(interests:"Puppy")
+jen.favorites.create(interests:"Cal Football")
+jen.favorites.create(interests:"Crazy Ex-Girlfriend")
+jen.favorites.create(interests:"Rickroll")
+
+Timecop.freeze(Date.today - 7) do
+	jen.days.create({
+		emotion: "joy"
+		})
+	end
+
+Timecop.freeze(Date.today - 6) do
+	jen.days.create({
+		emotion: "anger"
+		})
+	end
+
+Timecop.freeze(Date.today - 5) do
+	jen.days.create({
+		emotion: "anger"
+		})
+end
+
+Timecop.freeze(Date.today - 4) do
+	jen.days.create({
+		emotion: "sorrow"
+		})
+end
+
+Timecop.freeze(Date.today - 3) do
+	jen.days.create({
+		emotion: "joy"
+		})
+end
+
+Timecop.freeze(Date.today - 2) do
+	jen.days.create({
+		emotion: "surprise"
+		})
+end
+
+Timecop.freeze(Date.today - 1) do
+	jen.days.create({
+		emotion: "anger"
+		})
+end
+
+Timecop.freeze(Date.today) do
+	jen.days.create({
+		emotion: "joy"
+		})
+end
