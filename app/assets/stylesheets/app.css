@@ -1,3 +1,7 @@
 .new-favorite-form {
   display: none;
 }
+
+body {
+	margin: 5px;
+}
