@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :days
   has_many :favorites
 
+  validates :email, :crypted_password, :phone, presence: true
   def self.chart(user)
     sorrow = user.days.where(emotion: 'sorrow').count
     joy = user.days.where(emotion: 'joy').count
