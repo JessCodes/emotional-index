@@ -11,7 +11,14 @@ require 'httparty'
   end
 
   def gemo
-    ENV['GEMO_KEY']
+    @user = User.find_by(id: params[:id])
+    @new_emotion = @user.days.new(emotion: params[:emotion])
+    
+    if @new_emotion.save
+      render json: "success"
+    else
+      render json: {errors: "not duck daddy"} 
+    end
   end
 
   def twilio
