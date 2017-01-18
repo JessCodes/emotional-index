@@ -33,8 +33,8 @@ password: "password"
 ## Authors
 - Megan Eding
 - Jess Ellison
-- Katee Trant
 - Anthony Tokatly
+- Katee Trant
 - Jen Young 
 
 See also the list of [contributors](https://github.com/JessCodes/emotional-index/graphs/contributors) who worked on this project.
