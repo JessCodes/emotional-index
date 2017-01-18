@@ -76,6 +76,12 @@ jen.favorites.create(interests:"Cal Football")
 jen.favorites.create(interests:"Crazy Ex-Girlfriend")
 jen.favorites.create(interests:"Rickroll")
 
+Timecop.freeze(Date.today - 8) do
+	jen.days.create({
+		emotion: "sorrow"
+		})
+end
+
 Timecop.freeze(Date.today - 7) do
 	jen.days.create({
 		emotion: "joy"
@@ -115,11 +121,5 @@ end
 Timecop.freeze(Date.today - 1) do
 	jen.days.create({
 		emotion: "anger"
-		})
-end
-
-Timecop.freeze(Date.today) do
-	jen.days.create({
-		emotion: "joy"
 		})
 end
