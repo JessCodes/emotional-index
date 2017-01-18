@@ -1,8 +1,10 @@
 class ApiController < ApplicationController
 require 'httparty'
   def youtube
+    @user = User.find_by(id: params[:id])
+    @fav = @user.favorites.sample.interests
     ENV['YT_KEY']
-    url = URI("https://www.googleapis.com/youtube/v3/search?part=snippet&q='dogs'&maxResults=1&order=viewCount&alt=json&key="+ENV['YT_KEY'])
+    url = URI('https://www.googleapis.com/youtube/v3/search?part=snippet&q='+@fav+'&maxResults=1&order=viewCount&alt=json&key='+ENV['YT_KEY'])
     response = HTTParty.get(url)
     # Full json response
     p response.parsed_response
