@@ -22,11 +22,12 @@ require 'httparty'
   end
 
   def twilio
+    @user = User.find_by(id: params[:id])
     @client = Twilio::REST::Client.new ENV['TWILIO_SID_KEY'], ENV['TWILIO_AUTH_KEY']
     begin
       @client.messages.create(
         body: "hello",
-        to: "+19499230368",
+        to: @user.phone,
         from: "+19493572945"
       )
     rescue Twilio::REST::RequestError => error
