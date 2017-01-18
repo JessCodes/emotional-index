@@ -68,7 +68,7 @@ jen = User.create(email:"jen@jen.com",
 phone: "+19499230368",
 push: true,
 text: true,
-password: "penis")
+password: "password")
 
 jen.favorites.create(interests:"Dogs")
 jen.favorites.create(interests:"Puppy")
