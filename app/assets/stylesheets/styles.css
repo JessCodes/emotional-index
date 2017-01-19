@@ -4,15 +4,20 @@ h3 {
 
 body {
   background-color: #5B5151;
-  color: #9DE0AD
+  color: #9DE0AD;
+  text-align: center;
+}
+
+nav {
+  text-align: left;
 }
 
 a {
-  color: #E5FCC2;
+  color: #45ADA8;
 }
 
 a:hover {
-  color: #9DE0AD
+  color: #9DE0AD;
 }
 
 nav {
@@ -34,5 +39,5 @@ input[type="submit"] {
 }
 
 input[type="checkbox"] {
-  color: #9DE0AD;
+  color: #E5FCC2;
 }

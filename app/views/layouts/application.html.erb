@@ -14,11 +14,11 @@
         <a href="/" class="brand-logo">Emote Me</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if logged_in? %>
-            <li><%= link_to current_user.email, user_path(current_user), class: 'waves-effect waves-light' %></li>
-            <li><%= link_to "Logout", logout_path, class: 'waves-effect waves-light' %></li>
+            <li><%= link_to current_user.email, user_path(current_user) %></li>
+            <li><%= link_to "Logout", logout_path %></li>
           <% else %>
-            <li><%= link_to "Login", login_path, class: 'waves-effect waves-light' %></li>
-            <li><%= link_to "Sign Up", new_user_path, class: 'waves-effect waves-light' %></li>
+            <li><%= link_to "Login", login_path %></li>
+            <li><%= link_to "Sign Up", new_user_path %></li>
           <% end %>
         </ul>
       </div>
