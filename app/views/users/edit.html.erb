@@ -2,7 +2,9 @@
 <ul>
   <%= render partial: "list", locals: { favorites: @favorites, user: @user} %>
 </ul>
-<%= link_to "Add a Favorite", new_user_favorite_path(@user),{ :class=>"new-favorite-link" } %>
+
+<center><%= button_to "Add a Favorite", new_user_favorite_path(@user),{ :class=>"new-favorite-link" } %></center>
+
 
 <div class="new-favorite-form">
     <h3 class="panel-heading"></h3>
