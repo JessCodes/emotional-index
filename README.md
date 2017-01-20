@@ -33,7 +33,7 @@ password: "password"
     + Giphy API
     + Google Cloud Vision API
     + Rails API for user login, custom built
-    + SwiftlyJSON
+    + SwiftyJSON
     + Twilio API
     + YouTube API
 - Ruby/Ruby on Rails
