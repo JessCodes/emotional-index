@@ -1,6 +1,6 @@
 <% favorites.each do |favorite| %>
-    <div class="chip">
-        <li id="<%=favorite.id%>"><%= favorite.interests %>
+    <div class="chip" id="<%=favorite.id%>">
+        <li ><%= favorite.interests %>
         <%= link_to "X",  user_favorite_path(favorite.user_id, favorite.id), :method => 'delete', remote: true %>
         </li>
     </div>
