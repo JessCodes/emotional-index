@@ -20,7 +20,7 @@ You will also need to bundle your gems if you wish to look at the project on loc
 
 If you want to log into the web application, use the below email/password information to sign in as a dummy user to see the graphical representation of that user's emotions:
 
-email: "madison_green@paucek.co"
+email: "lucas@walter.io"
 
 password: "password"
 
